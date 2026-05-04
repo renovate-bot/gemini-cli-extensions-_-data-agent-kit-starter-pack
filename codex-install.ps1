@@ -12,6 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+param(
+    [Parameter(Mandatory = $false)]
+    [string]$Tag
+)
+
+if (-not $Tag -and $env:CODEX_TAG) {
+    $Tag = $env:CODEX_TAG
+}
+
 $ErrorActionPreference = "Stop"
 
 $pluginName = "data-agent-kit-starter-pack"
@@ -56,24 +65,25 @@ Write-Host "--- $pluginName Installer for Codex ---"
 New-Item -ItemType Directory -Force -Path $pluginsRoot | Out-Null
 
 if (Test-Path $installDir) {
-    try {
-        & git -C $installDir rev-parse --is-inside-work-tree 2>$null | Out-Null
-    } catch {
-    }
-
-    if ($LASTEXITCODE -eq 0) {
-        Write-Host "Updating existing plugin at $installDir..."
-        Invoke-GitCommand -Arguments @("-C", $installDir, "pull")
-    } else {
-        Write-Host "Existing directory at $installDir is not a valid git checkout. Reinstalling..."
-        Remove-Item -LiteralPath $installDir -Recurse -Force
-        Write-Host "Cloning plugin to $installDir..."
-        Invoke-GitCommand -Arguments @("clone", $repoUrl, $installDir)
-    }
-} else {
-    Write-Host "Cloning plugin to $installDir..."
-    Invoke-GitCommand -Arguments @("clone", $repoUrl, $installDir)
+    $timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
+    $backupName = "$pluginName" + "_backup_" + $timestamp
+    $backupPath = Join-Path (Split-Path $installDir) $backupName
+    Write-Host "Backing up existing plugin to $backupPath..."
+    Rename-Item -LiteralPath $installDir -NewName $backupName
+    Write-Host "Notice: Your previous installation has been backed up to $backupPath."
+    Write-Host "You can delete it if you do not need it."
 }
+
+if ($Tag) {
+    Write-Host "Cloning plugin version $Tag to $installDir..."
+    Invoke-GitCommand -Arguments @("clone", "--depth", "1", "--branch", $Tag, $repoUrl, $installDir)
+} else {
+    Write-Host "Cloning plugin default branch to $installDir..."
+    Invoke-GitCommand -Arguments @("clone", "--depth", "1", $repoUrl, $installDir)
+}
+
+Write-Host "Removing git metadata..."
+Remove-Item -LiteralPath (Join-Path $installDir ".git") -Recurse -Force
 
 if (-not (Test-Path $marketplaceFile)) {
     Write-Host "Creating new personal marketplace..."
