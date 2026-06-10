@@ -11,17 +11,17 @@ description: |
     4. Creating a new notebook, even if just using BigQuery cells.
     5. Generating Python code that includes `import` statements for third-party libraries.
     6. Before executing Python scripts via the terminal to ensure the correct virtual environment is active.
-license: Apache-2.0
 metadata:
   version: v1
-  publisher: google
 ---
 
 # Python Dependency Management Rule
 
-> [!CAUTION] **BEFORE any `pip install`**: You MUST first detect the project's
-> existing dependency manager and use it correctly. Do NOT override the
-> project's established tooling.
+> [!CAUTION]
+>
+> **BEFORE any `pip install`**: You MUST first detect the project's existing
+> dependency manager and use it correctly. Do NOT override the project's
+> established tooling.
 
 ## Dependency Manager Detection
 

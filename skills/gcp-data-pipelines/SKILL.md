@@ -1,16 +1,14 @@
 ---
 name: gcp-data-pipelines
-description: 'Primary entry point for building, managing, and orchestrating data pipelines
-  on Google Cloud. Guides users to the appropriate skill for dbt, Dataflow (Apache
-  Beam), Dataform, Spark (Dataproc Serverless), BigQuery Data Transfer Service (DTS)
-  or orchestration pipeline using Cloud Composer. Clarify requirements and resolve
-  ambiguity for creating, updating and running data pipelines.
-
-  '
-license: Apache-2.0
+description: >
+  Primary entry point for building, managing, and orchestrating data pipelines
+  on Google Cloud. Guides users to the appropriate skill for
+  dbt, Dataflow (Apache Beam), Dataform, Spark (Dataproc Serverless), BigQuery Data Transfer Service (DTS) or
+  orchestration pipeline using Cloud Composer.
+  Clarify requirements and resolve ambiguity for creating, updating
+  and running data pipelines.
 metadata:
   version: v1
-  publisher: google
 ---
 
 # GCP Data Pipelines Skill
@@ -121,19 +119,25 @@ multiple pipelines already in the repo:
 :                  : (Datasets, DTS,    :                                      :
 :                  : Dataproc)          :                                      :
 
-> [!TIP] If the user mentions **scheduling**, **automating**, **cron**, or
+> [!TIP]
+>
+> If the user mentions **scheduling**, **automating**, **cron**, or
 > **coordinating** existing scripts, queries, or notebooks — highlight **Cloud
 > Composer / Orchestration** as the most likely fit.
 
-> [!NOTE] Based on any hints in the user's request (data size, language
-> preference, source/destination, complexity), you SHOULD **briefly highlight
-> the most likely fit** before asking them to confirm.
+> [!NOTE]
+>
+> Based on any hints in the user's request (data size, language preference,
+> source/destination, complexity), you SHOULD **briefly highlight the most
+> likely fit** before asking them to confirm.
 
 ### Step 3: Confirm Selection
 
-> [!IMPORTANT] You MUST **stop and wait for the user to select one of the
-> options above.** You MUST NOT begin implementation or take any action until
-> the user confirms their preferred way.
+> [!IMPORTANT]
+>
+> You MUST **stop and wait for the user to select one of the options above.**
+> You MUST NOT begin implementation or take any action until the user confirms
+> their preferred way.
 
 ### Clarifying "Run" Requests
 

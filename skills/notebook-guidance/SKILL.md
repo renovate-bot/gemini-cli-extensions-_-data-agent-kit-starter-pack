@@ -1,16 +1,19 @@
 ---
 name: notebook-guidance
-description: |-
-  This skill guides the use of Jupyter notebooks for data analysis, exploration, and visualization, particularly with BigQuery. It outlines best practices for notebook execution and validation (supporting both cell-by-cell execution and full notebook generation depending on tool availability), library installation, and structuring notebooks for clarity. It also covers specific rules for data cleaning, plotting, and integrating with BigQuery SQL and machine learning workflows.
+description: >-
+  This skill guides the use of Jupyter notebooks for data analysis, exploration,
+  and visualization, particularly with BigQuery. It outlines best practices for
+  notebook execution and validation (supporting both cell-by-cell execution and full notebook generation depending on tool availability), library installation, and structuring
+  notebooks for clarity. It also covers specific rules for data cleaning,
+  plotting, and integrating with BigQuery SQL and machine learning workflows.
+
   Relevant when any of the following conditions are true:
     1. The user request involves a data analysis, data exploration, data visualization, or data insights task that requires multiple steps, queries, or visualizations to answer.
     2. The user explicitly requests a notebook (.ipynb).
     3. You are creating, editing, or executing cells in a Jupyter notebook.
     4. You need to query BigQuery from within a notebook. DO NOT use the Python BigQuery client library; instead, you MUST use the `%%bqsql` magics explained in this skill.
-license: Apache-2.0
 metadata:
   version: v5
-  publisher: google
 ---
 
 # Notebook Guidance
@@ -20,7 +23,7 @@ metadata:
 Before choosing to use a notebook, evaluate the task complexity using these
 heuristics.
 
-Use a notebook if you meet at least one of these 3 criteria:
+Use a notebook if you meet at least one of these criteria:
 
 *   📈 **Data Insights & Storytelling**: Use a notebook for any request to "give
     insights", "find trends", "explore data", or "analyze data". These tasks

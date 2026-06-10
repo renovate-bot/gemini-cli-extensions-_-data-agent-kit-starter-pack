@@ -1,26 +1,25 @@
 ---
 name: gcp-spark
 description: |
-  Develops and executes Spark code on Dataproc Clusters and Serverless.
-  Reads and writes data using BigLake Iceberg catalogs, BigQuery and Spanner.
-  Debugs execution failures.
-  Use when:
-  - Writing Spark ETL pipelines on GCP.
-  - Training or running inference with ML models with spark on GCP.
-  - Managing Spark clusters, jobs, batches, and interactive sessions.
-  Don't use when:
-  - Writing generic Python scripts that don't use Spark.
-  - Performing simple SQL queries that can be done directly in BigQuery.
-license: Apache-2.0
+    Develops and executes Spark code on Dataproc Clusters and Serverless.
+    Reads and writes data using BigLake Iceberg catalogs, BigQuery and Spanner.
+    Debugs execution failures.
+    Use when:
+    - Writing Spark ETL pipelines on GCP.
+    - Training or running inference with ML models with spark on GCP.
+    - Managing Spark clusters, jobs, batches, and interactive sessions.
+    Don't use when:
+    - Writing generic Python scripts that don't use Spark.
+    - Performing simple SQL queries that can be done directly in BigQuery.
 metadata:
   version: v2
-  publisher: google
 ---
 
 # Spark on Dataproc
 
-> [!IMPORTANT] You MUST ALWAYS follow the Task Execution Workflow when writing
-> spark code.
+> [!IMPORTANT]
+>
+> You MUST ALWAYS follow the Task Execution Workflow when writing spark code.
 
 ## Task Execution Workflow
 
@@ -53,7 +52,9 @@ metadata:
 
 ## Common Mistakes Checklist
 
-> [!CAUTION] Ensure you verify this checklist to avoid mistakes
+> [!CAUTION]
+>
+> Ensure you verify this checklist to avoid mistakes
 
 Before submitting a job, verify:
 

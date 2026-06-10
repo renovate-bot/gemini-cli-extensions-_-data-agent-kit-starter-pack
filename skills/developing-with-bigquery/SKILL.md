@@ -1,25 +1,28 @@
 ---
 name: developing-with-bigquery
-description: |
+description: >
   A repository of BigQuery-specific logic, knowledge, and specialized standards.
+
   Use this skill whenever you are doing anything with BigQuery, including:
     1. BigQuery query optimization
     2. BigFrames Python code
     3. BigQuery ML/AI functions.
-license: Apache-2.0
 metadata:
   version: v1
-  publisher: google
 ---
 
 This skill provides comprehensive guidance for BigQuery services, optimizations,
 and data handling. It acts as a routing table for specialized BigQuery topics.
 
-> [!IMPORTANT] For general standards on running BigQuery in notebooks (SQL
-> cells, `export` keyword), see `@skill:notebook-guidance`.
+> [!IMPORTANT]
+>
+> For general standards on running BigQuery in notebooks (SQL cells, `export`
+> keyword), see `@skill:notebook-guidance`.
 
-> [!IMPORTANT] You MUST check the data size before deciding on which libraries
-> to use. Use the data size to justify your decision.
+> [!IMPORTANT]
+>
+> You MUST check the data size before deciding on which libraries to use. Use
+> the data size to justify your decision.
 
 Refer to the following resources for expert guidance on specific BigQuery
 features:

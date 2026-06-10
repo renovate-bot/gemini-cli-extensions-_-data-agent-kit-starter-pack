@@ -1,14 +1,13 @@
 ---
 name: gcp-pipeline-orchestration
-description: This skill helps the agent generate or update orchestration pipeline
-  definitions for Google Cloud Composer to initialize orchestration pipeline or update
-  the orchestration definition for orchestration of various data pipelines, like dbt
-  pipelines, notebooks, Spark jobs, Dataform, Python scripts or inline BigQuery SQL
-  queries. This skill also helps deploy and trigger orchestration pipelines.
-license: Apache-2.0
+description:
+  This skill helps the agent generate or update orchestration pipeline
+  definitions for Google Cloud Composer to initialize orchestration pipeline or update the
+  orchestration definition for orchestration of various data pipelines, like dbt
+  pipelines, notebooks, Spark jobs, Dataform, Python scripts or inline BigQuery SQL queries.
+  This skill also helps deploy and trigger orchestration pipelines.
 metadata:
   version: v1
-  publisher: google
 ---
 
 ## Mandatory Reference Routing

@@ -14,10 +14,8 @@ description: |
     1. The request is for building backend-only services.
     2. The request is for simple CLI scripts or command-line applications.
     3. The web application is not data-centric or does not involve visualizing/querying data from GCP sources.
-license: Apache-2.0
 metadata:
   version: v1
-  publisher: google
 ---
 
 # Building Data Applications

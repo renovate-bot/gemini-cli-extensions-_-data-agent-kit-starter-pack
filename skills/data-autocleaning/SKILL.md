@@ -1,13 +1,12 @@
 ---
 name: data-autocleaning
-description: Automated data quality and transformation capabilities for Dataform/dbt/BigQuery
-  pipelines. Processes data sourced from BigQuery or Cloud Storage (GCS), applying
-  best practices for data ingestion, movement, schema mapping, and comprehensive data
-  cleaning.
-license: Apache-2.0
+description:
+  Automated data quality and transformation capabilities for
+  Dataform/dbt/BigQuery pipelines. Processes data sourced from BigQuery
+  or Cloud Storage (GCS), applying best practices for data ingestion,
+  movement, schema mapping, and comprehensive data cleaning.
 metadata:
   version: v1
-  publisher: google
 ---
 
 # Data Autocleaning Skill
