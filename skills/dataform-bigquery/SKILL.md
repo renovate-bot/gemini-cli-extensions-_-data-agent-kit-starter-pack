@@ -7,7 +7,7 @@ description: Expertise in generating clean, correct, and efficient Dataform pipe
   up a new Dataform project or configuring workflow_settings.yaml.
 license: Apache-2.0
 metadata:
-  version: v2
+  version: v3
   publisher: google
 ---
 
@@ -112,7 +112,7 @@ Follow these steps when fulfilling Dataform-related requests:
     -   If cleaning is not applied, provide **strong evidence** in the response.
     -   Include an **"Automatic Cleaning Summary"** section in every response.
 -   **SQL Optimizations:**
-    -   Follow the optimization protocol in **@skill:developing-with-bigquery**
+    -   Follow the optimization protocol in **@skill:bigquery**
         strictly.
     -   Include an **"Optimization Summary"** section when applied.
 

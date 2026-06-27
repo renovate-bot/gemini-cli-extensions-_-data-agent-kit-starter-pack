@@ -1,5 +1,5 @@
 ---
-name: developing-with-bigquery
+name: bigquery
 description: |
   Provides BigQuery-specific logic, knowledge, and specialized standards.
   Use this skill whenever you are doing anything with BigQuery, including:
@@ -9,17 +9,13 @@ description: |
     4. Graph Analytics (GQL & Property Graphs)
 license: Apache-2.0
 metadata:
-  version: v2
+  version: v3
   publisher: google
 ---
 
 This skill provides comprehensive guidance for BigQuery services, optimizations,
 and data handling. It acts as a routing table for specialized BigQuery topics.
 
-> [!IMPORTANT]
->
-> For general standards on running BigQuery in notebooks (SQL cells, `export`
-> keyword), see `@skill:notebook-guidance`.
 
 > [!IMPORTANT]
 >
