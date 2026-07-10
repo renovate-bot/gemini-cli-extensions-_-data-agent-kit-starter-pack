@@ -166,7 +166,6 @@ Edit the configuration file:
 </details>
 
 <!-- {x-release-please-end} -->
-<!-- release-please-force: 0.6.1 -->
 
 ## Usage Examples
 
